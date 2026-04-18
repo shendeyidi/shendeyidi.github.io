@@ -1,46 +1,240 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="郝学胜 - 软件科学博主，专注于算法与数据结构、计算机图形学、系统设计">
+    <title>郝学胜 | 软件科学</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">软件科学</div>
+            <ul class="nav-links">
+                <li><a href="#home">主页</a></li>
+                <li><a href="#tech">技术领域</a></li>
+                <li><a href="#platforms">内容平台</a></li>
+                <li><a href="#content">精选内容</a></li>
+                <li><a href="about.html">关于我</a></li>
+            </ul>
+        </div>
+    </nav>
 
-	<head>
-		<meta charset="utf-8" />
-		<title></title>
-		<link rel="stylesheet" href="css/bootstrap.css" />
-	</head>
+    <!-- 英雄区域 -->
+    <section id="home" class="hero">
+        <div class="hero-content fade-in">
+            <h1>郝学胜</h1>
+            <p class="subtitle">软件科学博主</p>
+            <p class="description">
+                热爱编程，热爱数学，专注于计算机图形学、算法与数据结构、系统设计。<br>
+                用通俗的语言讲解复杂的技术，让每个人都能享受编程的乐趣。
+            </p>
+            <div class="hero-badges">
+                <span class="badge"><i class="fas fa-code"></i> 算法</span>
+                <span class="badge"><i class="fas fa-cube"></i> 图形学</span>
+                <span class="badge"><i class="fas fa-sitemap"></i> 系统设计</span>
+                <span class="badge"><i class="fas fa-graduation-cap"></i> 技术分享</span>
+            </div>
+            <div class="social-links">
+                <a href="https://shendeyidi.blog.csdn.net/" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-blog"></i> CSDN博客
+                </a>
+                <a href="https://space.bilibili.com/" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-bilibili"></i> Bilibili
+                </a>
+            </div>
+        </div>
+    </section>
 
-	<body>
-		<div class="container">
-			<br />
-			<div class="jumbotron">
-				<h1>你好, 我的朋友!</h1>
-				<p>我首先是一只有点二逼的程序员，热爱编程，热爱数学，从事于计算机图形学与自动化程序方面的应用与研究！</p>
-				<p>
-					<a class="btn btn-primary btn-lg" href="#" role="button">了解一下</a>
-				</p>
-			</div>
-			<ul class="nav nav-pills  nav-justified">
-				<li role="presentation" class="active">
-					<a href="#">主页</a>
-				</li>
-			    <li role="presentation">
-					<a href="#">计算机图形学</a>
-				</li>
-				 <li role="presentation">
-					<a href="#">自动化编程</a>
-				</li>
-				<li role="presentation">
-					<a href="#">我的游戏</a>
-				</li>
-				<li role="presentation">
-					<a href="#">我的项目</a>
-				</li>
-				<li role="presentation">
-					<a href="about.html">关于我</a>
-				</li>
-			</ul>
+    <!-- 技术领域 -->
+    <section id="tech" class="section">
+        <h2 class="section-title">技术领域</h2>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3>算法与数据结构</h3>
+                <p>深入浅出力扣题解，从基础数据结构到高级算法，用清晰的思路和优雅的代码帮你攻克算法难关。</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">链表</span>
+                    <span class="tech-tag">树</span>
+                    <span class="tech-tag">动态规划</span>
+                    <span class="tech-tag">贪心</span>
+                </div>
+            </div>
+            
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <h3>计算机图形学</h3>
+                <p>简化版 Games 101，从线性代数基础到光栅化、光线追踪，带你探索数字视觉的奥秘。</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">OpenGL</span>
+                    <span class="tech-tag">Qt6</span>
+                    <span class="tech-tag">3D渲染</span>
+                    <span class="tech-tag">MVP变换</span>
+                </div>
+            </div>
+            
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fas fa-sitemap"></i>
+                </div>
+                <h3>系统设计</h3>
+                <p>从面试到实战，深度解析分布式系统、微服务架构、数据存储等核心设计思想。</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">微服务</span>
+                    <span class="tech-tag">数据库</span>
+                    <span class="tech-tag">缓存</span>
+                    <span class="tech-tag">消息队列</span>
+                </div>
+            </div>
+            
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>深度学习</h3>
+                <p>PyTorch实战教程，从张量基础到CNN、RNN，带你入门深度学习核心技术。</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">CNN</span>
+                    <span class="tech-tag">RNN</span>
+                    <span class="tech-tag">神经网络</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		</div>
-		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-		<script type="text/javascript" src="js/bootstrap.js"></script>
-	</body>
+    <!-- 平台链接 -->
+    <section id="platforms" class="section">
+        <h2 class="section-title">内容平台</h2>
+        <div class="platforms">
+            <div class="platform-grid">
+                <a href="https://shendeyidi.blog.csdn.net/" target="_blank" class="platform-card">
+                    <div class="platform-icon">📝</div>
+                    <h4>CSDN博客</h4>
+                    <span>技术文章与教程</span>
+                </a>
+                <a href="https://space.bilibili.com/" target="_blank" class="platform-card">
+                    <div class="platform-icon">📺</div>
+                    <h4>Bilibili</h4>
+                    <span>视频教程与分享</span>
+                </a>
+                <a href="https://github.com/shendeyidi" target="_blank" class="platform-card">
+                    <div class="platform-icon">💻</div>
+                    <h4>GitHub</h4>
+                    <span>开源项目与代码</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
+    <!-- 精选内容 -->
+    <section id="content" class="section">
+        <h2 class="section-title">精选内容</h2>
+        <div class="content-grid">
+            <div class="content-card">
+                <div class="content-header">
+                    <h3><i class="fas fa-video"></i> 热门视频</h3>
+                </div>
+                <ul class="content-list">
+                    <li>
+                        <a href="https://www.bilibili.com/video/BV1wRAwzNEEY/" target="_blank">
+                            <span>计算机图形学 01：技术与艺术的融合</span>
+                            <span class="content-tag">图形学</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.bilibili.com/video/BV1meXCBYEXj/" target="_blank">
+                            <span>系统设计：CS数据存储核心逻辑</span>
+                            <span class="content-tag">系统设计</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.bilibili.com/video/BV1FQ9KBnE5c/" target="_blank">
+                            <span>力扣 20：有效括号序列解析</span>
+                            <span class="content-tag">算法</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.bilibili.com/video/BV1vtQnBLE2v/" target="_blank">
+                            <span>新鲜事系统：写扩散与读扩散</span>
+                            <span class="content-tag">系统设计</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="content-card">
+                <div class="content-header">
+                    <h3><i class="fas fa-file-alt"></i> 热门文章</h3>
+                </div>
+                <ul class="content-list">
+                    <li>
+                        <a href="https://shendeyidi.blog.csdn.net/article/details/158813073" target="_blank">
+                            <span>深度学习入门与核心技术解析</span>
+                            <span class="content-tag">深度学习</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://shendeyidi.blog.csdn.net/article/details/155631454" target="_blank">
+                            <span>Linux进程创建与设计模式应用</span>
+                            <span class="content-tag">Linux</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <span>从链表到二叉树：树形结构入门</span>
+                            <span class="content-tag">数据结构</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <span>Qt6 + OpenGL 3.3 渲染环境搭建</span>
+                            <span class="content-tag">图形学</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2026 郝学胜 | 软件科学</p>
+        <p>用代码改变世界，用分享传递知识</p>
+    </footer>
+
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+            }
+        });
+    </script>
+</body>
 </html>

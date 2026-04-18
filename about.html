@@ -1,69 +1,390 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="关于郝学胜 - 软件科学博主">
+    <title>关于我 | 郝学胜</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .about-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            background: 
+                radial-gradient(ellipse at top, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom, rgba(118, 75, 162, 0.15) 0%, transparent 50%);
+        }
 
-	<head>
-		<meta charset="utf-8" />
-		<title></title>
-		<link rel="stylesheet" href="css/bootstrap.css" />
-	</head>
+        .profile-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
 
-	<body>
-		<div class="container">
-			<br />
-			<ul class="nav nav-pills  nav-justified">
-				<li role="presentation">
-					<a href="index.html">主页</a>
-				</li>
-				<li role="presentation">
-					<a href="#">计算机图形学</a>
-				</li>
-				<li role="presentation">
-					<a href="#">自动化编程</a>
-				</li>
-				<li role="presentation">
-					<a href="#">我的游戏</a>
-				</li>
-				<li role="presentation">
-					<a href="#">我的项目</a>
-				</li>
-				<li role="presentation" class="active">
-					<a href="#">关于我</a>
-				</li>
-			</ul>
-			<br />
-			<br />
-			<div class="panel panel-primary" style=>
-				<div class="panel-heading">
-					<h3 class="panel-title">神的一滴</h3>
-				</div>
-				<div class="panel-body">
-					承接各种计算机外包项目，各种毕业设计，计算机作业，，，代写各种论文，，，
-				</div>
-				<table class="table">
-					<tr>
-						<td>姓名：</td>
-						<td>凭啥告诉你！</td>
-					</tr>
-					<tr>
-						<td>性别：</td>
-						<td>大概是个男的！</td>
-					</tr>
-					<tr>
-						<td>QQ：</td>
-						<td>2956576949！</td>
-					</tr>
-					<tr>
-						<td>微信：</td>
-						<td>daofaziran1990！</td>
-					</tr>
-				</table>
-				<div class="panel-footer">我是一个好人！！</div>
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin: 0 auto 2rem;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+        }
 
-			</div>
+        .profile-card h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-		</div>
-		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-		<script type="text/javascript" src="js/bootstrap.js"></script>
-	</body>
+        .profile-title {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
 
+        .profile-bio {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .contact-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .contact-section h3 {
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .contact-item {
+            background: rgba(59, 130, 246, 0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            background: rgba(59, 130, 246, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-info span {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .skills-section {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .skill-bar {
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-name {
+            color: var(--text-primary);
+        }
+
+        .skill-level {
+            color: var(--accent-color);
+        }
+
+        .skill-progress {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2));
+            border-radius: 4px;
+            transition: width 1s ease-out;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+            border-left: 2px solid rgba(59, 130, 246, 0.3);
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            min-width: 80px;
+        }
+
+        .timeline-content h4 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">软件科学</div>
+            <ul class="nav-links">
+                <li><a href="index.html">主页</a></li>
+                <li><a href="index.html#tech">技术领域</a></li>
+                <li><a href="index.html#platforms">内容平台</a></li>
+                <li><a href="index.html#content">精选内容</a></li>
+                <li><a href="about.html">关于我</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 关于区域 -->
+    <section class="about-hero">
+        <div class="profile-card fade-in">
+            <div class="profile-avatar">👨‍💻</div>
+            <h1>郝学胜</h1>
+            <p class="profile-title">软件科学博主 / 技术分享者</p>
+            <p class="profile-bio">
+                我是一名热爱编程的程序员，专注于计算机图形学、算法与数据结构、系统设计等领域。<br>
+                我相信技术应该是通俗易懂的，致力于用简单的语言讲解复杂的概念。<br>
+                在 CSDN 和 Bilibili 上分享技术文章和视频，希望能帮助更多人享受编程的乐趣。
+            </p>
+            
+            <div class="contact-section">
+                <h3>联系方式</h3>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-qq"></i>
+                        </div>
+                        <div class="contact-info">
+                            <label>QQ</label>
+                            <span>2956576949</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-weixin"></i>
+                        </div>
+                        <div class="contact-info">
+                            <label>微信</label>
+                            <span>daofaziran1990</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info">
+                            <label>邮箱</label>
+                            <span>待添加</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能展示 -->
+    <section class="skills-section">
+        <h2 class="section-title">技能专长</h2>
+        
+        <div class="skill-bar">
+            <div class="skill-header">
+                <span class="skill-name">C++ / 算法与数据结构</span>
+                <span class="skill-level">95%</span>
+            </div>
+            <div class="skill-progress">
+                <div class="skill-fill" style="width: 95%"></div>
+            </div>
+        </div>
+
+        <div class="skill-bar">
+            <div class="skill-header">
+                <span class="skill-name">计算机图形学 / OpenGL</span>
+                <span class="skill-level">90%</span>
+            </div>
+            <div class="skill-progress">
+                <div class="skill-fill" style="width: 90%"></div>
+            </div>
+        </div>
+
+        <div class="skill-bar">
+            <div class="skill-header">
+                <span class="skill-name">系统设计 / 分布式架构</span>
+                <span class="skill-level">85%</span>
+            </div>
+            <div class="skill-progress">
+                <div class="skill-fill" style="width: 85%"></div>
+            </div>
+        </div>
+
+        <div class="skill-bar">
+            <div class="skill-header">
+                <span class="skill-name">深度学习 / PyTorch</span>
+                <span class="skill-level">80%</span>
+            </div>
+            <div class="skill-progress">
+                <div class="skill-fill" style="width: 80%"></div>
+            </div>
+        </div>
+
+        <div class="skill-bar">
+            <div class="skill-header">
+                <span class="skill-name">Qt / 桌面应用开发</span>
+                <span class="skill-level">85%</span>
+            </div>
+            <div class="skill-progress">
+                <div class="skill-fill" style="width: 85%"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 经历时间线 -->
+    <section class="timeline">
+        <h2 class="section-title">经历与成就</h2>
+        
+        <div class="timeline-item">
+            <div class="timeline-date">现在</div>
+            <div class="timeline-content">
+                <h4>软件科学博主</h4>
+                <p>在 CSDN 和 Bilibili 持续输出优质技术内容，专注于算法、图形学、系统设计等领域，帮助更多开发者成长。</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h4>技术内容创作者</h4>
+                <p>开始系统性地整理和分享技术知识，创建了"简化版 Games 101"、"力扣题解"等系列内容，获得广泛好评。</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h4>计算机图形学研究</h4>
+                <p>深入研究计算机图形学，掌握 OpenGL、Qt6 等技术，能够独立完成渲染引擎开发。</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h4>编程之旅开始</h4>
+                <p>热爱编程，热爱数学，踏上软件科学的探索之路。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2026 郝学胜 | 软件科学</p>
+        <p>用代码改变世界，用分享传递知识</p>
+    </footer>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+            }
+        });
+
+        // 技能条动画
+        window.addEventListener('load', () => {
+            const skillFills = document.querySelectorAll('.skill-fill');
+            skillFills.forEach((fill, index) => {
+                const width = fill.style.width;
+                fill.style.width = '0';
+                setTimeout(() => {
+                    fill.style.width = width;
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
 </html>
